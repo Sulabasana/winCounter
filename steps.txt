@@ -1,0 +1,4 @@
+1. Create HTML with input, div with 2x span including numbers and txt, 3 buttons: player 1, player2, and reset
+2. UI controller with dynamic numbers (whats the result, and how many rounds, and will change color if someon wins)
+3. Back controller - it will count the numbers of win round, wiill get data from input, will block round numbers if max is reached. Will reset the score.
+that's all for now
