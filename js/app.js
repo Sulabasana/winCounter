@@ -26,18 +26,17 @@ var p1 = document.querySelector('.p1')
 var p2 = document.querySelector('.p2')
 var button1 = document.getElementById('first')
 var button2 = document.getElementById('second')
+var res = document.getElementById('reset')
 var finish = false
 var p1Score = 0;
 var p2Score = 0;
 var input = document.querySelector('input')
-var data = document.querySelector('.rounds');
 var win = document.getElementById('win');
-
-console.log(data)
+var winner = 0;
 button1.addEventListener('click', function(){
 	if(!finish){
 		p1Score++
-		if(p1Score === win){
+		if(p1Score === winner){
 			p1.classList.add('winner')
 			finish = true
 		}
@@ -47,7 +46,7 @@ button1.addEventListener('click', function(){
 button2.addEventListener('click', function(){
 	if(!finish){
 		p2Score++
-		if(p2Score === win){
+		if(p2Score === winner){
 			p2.classList.add('winner')
 			finish = true
 		}
@@ -55,11 +54,26 @@ button2.addEventListener('click', function(){
 	}
 	
 });
+
+res.addEventListener('click', function(){
+	reset()
+});
 input.addEventListener("change", function(){
 	win.textContent = this.value;
-	data = Number(this.value);
-	
+	winner = Number(this.value);
+	reset();
 	});
+
+function reset(){
+	p1.textContent = 0;
+	p2.textContent = 0;
+	p1Score = 0;
+	p2Score = 0;
+	finish = false;
+	p1.classList.remove('winner')
+	p2.classList.remove('winner')
+
+}
 });
 
 
