@@ -3,15 +3,24 @@
 	margin: 0;
 	box-sizing: border-box;
 }
+body{
+	text-align: center;
+}
 header{
-	margin: 1em;
+	margin: 2em;
 }
 
 
 button{
 	border-radius: 15%;
 	padding: 0.5em;
+	margin: 1em
 }
 .winner{
 	color: #008aa0;
+}
+#winner{
+	font-size: 32px;
+	text-align: center;
+	margin: 1em;
 }

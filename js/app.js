@@ -33,12 +33,15 @@ var p2Score = 0;
 var input = document.querySelector('input')
 var win = document.getElementById('win');
 var winner = 0;
+var won = document.getElementById("winner")
+
 button1.addEventListener('click', function(){
 	if(!finish){
 		p1Score++
 		if(p1Score === winner){
 			p1.classList.add('winner')
 			finish = true
+			won.innerHTML = "P1 is the winner";
 		}
 		p1.textContent = p1Score;
 	}
@@ -49,6 +52,7 @@ button2.addEventListener('click', function(){
 		if(p2Score === winner){
 			p2.classList.add('winner')
 			finish = true
+			won.innerHTML = "P2 is the winner"
 		}
 		p2.textContent = p2Score;
 	}
@@ -74,6 +78,8 @@ function reset(){
 	p2.classList.remove('winner')
 
 }
+
+
 });
 
 
