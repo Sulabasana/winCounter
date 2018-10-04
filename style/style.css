@@ -5,17 +5,53 @@
 }
 body{
 	text-align: center;
+	color:#dee6f2;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../back.jpeg");
 }
 header{
 	margin: 2em;
 }
 
-
-button{
-	border-radius: 15%;
-	padding: 0.5em;
-	margin: 1em
+.read{
+	font-size: 24px;
+	margin: 4em;
 }
+.p1{
+	float: left;
+	margin: 0 0 0 6em;
+}
+
+.p2{
+	float: right;
+	margin: 0 6em 0 0 ;
+}
+.winning{
+	font-size: 22px;
+	margin:2em;
+	color:#dee6f2
+}
+
+/*Buttons*/
+button{
+	border-radius: 25%;
+	padding: 0.7em;
+	margin: 1em;
+	font-size: 24px;
+}
+
+#first{
+	margin-right: 7em;
+}
+#second{
+	margin-left: 7em;
+}
+#reset{
+	font-style: italic;
+	color: #591166;
+	background-color: red;
+
+	}
+
 .winner{
 	color: #008aa0;
 }

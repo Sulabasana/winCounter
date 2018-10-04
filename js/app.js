@@ -33,7 +33,16 @@ var p2Score = 0;
 var input = document.querySelector('input')
 var win = document.getElementById('win');
 var winner = 0;
-var won = document.getElementById("winner")
+var won = document.getElementById("winner");
+var addButton = document.querySelector(".like");
+
+
+if(input.value.length === 0){
+    addButton.disabled = true;
+};
+input.addEventListener("keypress", function(){
+	addButton.disabled = false;
+});
 
 button1.addEventListener('click', function(){
 	if(!finish){
@@ -58,15 +67,21 @@ button2.addEventListener('click', function(){
 	}
 	
 });
+addButton.addEventListener('click', function(){
+	win.textContent = input.value;
+	winner = Number(input.value);
+	//reset();
+});
 
 res.addEventListener('click', function(){
 	reset()
 });
-input.addEventListener("change", function(){
-	win.textContent = this.value;
-	winner = Number(this.value);
-	reset();
-	});
+// input.addEventListener("change", function(){
+// 	win.textContent = this.value;
+// 	winner = Number(this.value);
+// 	reset();
+// 	});
+
 
 function reset(){
 	p1.textContent = 0;
@@ -76,6 +91,8 @@ function reset(){
 	finish = false;
 	p1.classList.remove('winner')
 	p2.classList.remove('winner')
+	won.innerHTML="";
+	win.innerHTML="";
 
 }
 
