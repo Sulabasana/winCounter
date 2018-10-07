@@ -39,9 +39,13 @@ var addButton = document.querySelector(".like");
 
 if(input.value.length === 0){
     addButton.disabled = true;
+    button1.disabled = true;
+    button2.disabled = true;
 };
 input.addEventListener("keypress", function(){
 	addButton.disabled = false;
+	button1.disabled = false;
+	button2.disabled = false;
 });
 
 button1.addEventListener('click', function(){
@@ -55,6 +59,7 @@ button1.addEventListener('click', function(){
 		p1.textContent = p1Score;
 	}
 });
+
 button2.addEventListener('click', function(){
 	if(!finish){
 		p2Score++
@@ -67,6 +72,7 @@ button2.addEventListener('click', function(){
 	}
 	
 });
+
 addButton.addEventListener('click', function(){
 	win.textContent = input.value;
 	winner = Number(input.value);

@@ -18,12 +18,12 @@ header{
 }
 .p1{
 	float: left;
-	margin: 0 0 0 6em;
+	margin: 0 0 0 8em;
 }
 
 .p2{
 	float: right;
-	margin: 0 6em 0 0 ;
+	margin: 0 8em 0 0 ;
 }
 .winning{
 	font-size: 32px;
@@ -35,7 +35,7 @@ header{
 button{
 	border-radius: 25%;
 	padding: 0.7em;
-	margin: 1em;
+	margin: 3em 1em 1em 1em;
 	background: #ec75;
 	background-image: -webkit-linear-gradient(top, #ec75, #2079b0);
 	background-image: -moz-linear-gradient(top, #ec75, #2079b0);
@@ -65,10 +65,10 @@ button:hover {
 }
 
 #first{
-	margin-right: 7em;
+	margin-right: 8em;
 }
 #second{
-	margin-left: 7em;
+	margin-left: 8em;
 }
 #reset{
 	font-style: italic;
