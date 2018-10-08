@@ -41,11 +41,13 @@ if(input.value.length === 0){
     addButton.disabled = true;
     button1.disabled = true;
     button2.disabled = true;
+    res.disabled = true;
 };
 input.addEventListener("keypress", function(){
 	addButton.disabled = false;
 	button1.disabled = false;
 	button2.disabled = false;
+	res.disabled = false;
 });
 
 button1.addEventListener('click', function(){
@@ -55,6 +57,7 @@ button1.addEventListener('click', function(){
 			p1.classList.add('winner')
 			finish = true
 			won.innerHTML = "P1 is the winner";
+			
 		}
 		p1.textContent = p1Score;
 	}
@@ -102,9 +105,12 @@ function reset(){
 
 }
 
+var canvas = document.getElementById( 'canvas' ),
+		ctx = canvas.getContext( '2d' ),
+		// full screen dimensions
+		cw = window.innerWidth,
+		ch = window.innerHeight;
 
 });
-
-
 
 
